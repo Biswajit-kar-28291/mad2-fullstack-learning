@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body class="container">
+    <div id="app">
+        <div>
+            {{msg}}
+        </div>
+
+
+        <div>
+            <input type="text" v-model="msg">
+        </div>
+
+
+        <div>
+            <p v-bind:title="msg">hover to see the title.</p>
+        </div>
+
+        <div>
+            <button @click="um">update massage</button>
+        </div>
+
+        <div v-bind:class="msg">
+            <p>this peragraph style is changing when put class of bootstrap in the input feild...</p>
+        </div>
+
+        <div v-show="msg==='hi'">
+            <p>this peragraph show only when input feild have only hi massage.</p>
+        </div>
+
+
+    </div>
+</body>
+<script src="b.js"></script>
+</html>

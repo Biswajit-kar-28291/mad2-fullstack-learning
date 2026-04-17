@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h3>total msg is: {{count}}</h3>
+        <table>
+            <tr>
+                <td>
+                    <msg title="ok" v-on:add-event="count_g"></msg>
+                </td>
+                <td>
+                    <msg title="ok2" v-on:add-event="count_g"></msg>
+                </td>
+                <td>
+                    <msg title="ok3" v-on:add-event="count_g"></msg>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="a.js"></script>
+
+</html>

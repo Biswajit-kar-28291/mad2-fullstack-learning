@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue 2 Fetch Project</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      margin:0;
+      padding:20px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+    }
+
+    h1{
+      text-align:center;
+    }
+
+    input{
+      width:100%;
+      padding:10px;
+      margin-bottom:20px;
+      font-size:16px;
+      box-sizing:border-box;
+    }
+
+    button{
+      padding:8px 14px;
+      border:none;
+      background:#333;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    .card{
+      border:1px solid #ddd;
+      border-radius:8px;
+      padding:15px;
+      margin-bottom:15px;
+      background:#fafafa;
+    }
+
+    .loading{
+      color:blue;
+      font-weight:bold;
+    }
+
+    .error{
+      color:red;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>{{ title }}</h1>
+
+    <input type="text" v-model="search" placeholder="Search post by title">
+
+    <button @click="fetchPosts">Reload Posts</button>
+
+    <p class="loading" v-if="loading">Loading...</p>
+    <p class="error" v-if="error">{{ error }}</p>
+
+    <p v-if="!loading && !error">Total Posts: {{ filteredPosts.length }}</p>
+
+    <p v-if="!loading && !error && filteredPosts.length === 0">
+      No posts found
+    </p>
+
+    <div class="card" v-for="post in filteredPosts" :key="post.id">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+      <button @click="removePost(post.id)">Delete</button>
+    </div>
+  </div>
+
+  <script src="b.js"></script>
+</body>
+</html>
