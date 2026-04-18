@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>imput form</h1>
+        <form action="" style="margin: 5px; ">
+            <input type="text" id="name" placeholder="name" style="margin: 5px; ">
+            <input type="number" id="age" placeholder="age"  style="margin: 5px; "><br>
+            <input type="number" id="marks" placeholder="marks" style="margin: 5px; ">
+            <input type="text" id="skills" placeholder="skills"  style="margin: 5px; "><br>
+            <input type="button" value="add" style="margin: 5px; " onclick="add()">
+        </form>
+    </div>
+    <div id="card" style="display: flex;" >
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Manager App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Manager App</h1>
+    <p class="subtitle">Week 2 JavaScript Project (MAD 2)</p>
+
+    <div class="form-box">
+      <input type="text" id="name" placeholder="Enter student name" />
+      <input type="number" id="age" placeholder="Enter age" />
+      <input type="number" id="marks" placeholder="Enter marks" />
+      <input type="text" id="skills" placeholder="Enter skills (comma separated)" />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div class="action-box">
+      <button onclick="displayStudents(studentList)">Show All</button>
+      <button onclick="showPassedStudents()">Show Passed</button>
+      <button onclick="showTopper()">Show Topper</button>
+      <button onclick="exportJSON()">Export JSON</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchName" placeholder="Search by name" />
+      <button onclick="searchStudent()">Search</button>
+    </div>
+
+    <p id="message"></p>
+
+    <div id="studentContainer" class="student-container"></div>
+
+    <div class="json-box">
+      <h3>JSON Output</h3>
+      <pre id="jsonOutput"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
