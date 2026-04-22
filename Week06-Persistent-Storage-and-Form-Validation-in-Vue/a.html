@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue Week 6 Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>User Form</h2>
+
+    <form novalidate @submit="submitForm">
+      <input v-model="name" placeholder="Enter name">
+      <br><br>
+
+      <input v-model="email" placeholder="Enter email">
+      <br><br>
+
+      <p v-if="error" style="color:red">{{ error }}</p>
+      <p v-if="success" style="color:green">{{ success }}</p>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <hr>
+
+    <h3>Saved Data</h3>
+    <p>Name: {{ savedName }}</p>
+    <p>Email: {{ savedEmail }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="a.js">
+    
+  </script>
+</body>
+</html>
